@@ -382,7 +382,7 @@
               );
           };
       in rec {
-        lib = {inherit mkJupyterEnvFromKernelPath availableKernels;};
+        lib = {inherit mkJupyterEnvFromKernelPath mkKernel availableKernels;};
         packages = {inherit jupyterlab example_jupyterlab;};
         packages.default = packages.jupyterlab;
         devShells.default = pkgs.mkShell {
